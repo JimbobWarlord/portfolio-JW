@@ -32,3 +32,29 @@ document.querySelectorAll(".menu-item").forEach((item) => {
     }, 500);
   });
 });
+
+const backgroundshape = document.getElementById("background-shape");
+
+document.addEventListener("keydown", function (event) {
+  if (event.key.toLowerCase() === "r") {
+    document.body.style.backgroundColor = "rgb(60, 0, 0)";
+    console.log("ping");
+    backgroundshape.style.backgroundColor = "rgb(255, 0, 0)";
+  }
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key.toLowerCase() === "b") {
+    document.body.style.backgroundColor = "rgb(0, 0, 60)";
+    console.log("ping");
+    backgroundshape.style.backgroundColor = "rgb(0, 0, 255)";
+  }
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key.toLowerCase() === "p") {
+    document.body.style.backgroundColor = "rgb(60, 0, 60)";
+    console.log("ping");
+    backgroundshape.style.backgroundColor = "rgb(255, 0, 255)";
+  }
+});
