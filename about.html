@@ -23,10 +23,14 @@
       }
 
       .menu {
+        display:flex;
         position: absolute;
         top: 50%;
         left: 10%;
         transform: translateY(-50%);
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
       }
 
       .menu-item {
@@ -61,7 +65,13 @@
         font-size: 1.5rem;
         color: #eaf4ff;
         margin: 20px 0;
-        width: 600px;
+        width: 800px;
+      }
+
+      .right-side {
+        font-size: 1.5rem;
+        color: #eaf4ff;
+        margin-left:300px;
       }
 
       .background-shape {
@@ -74,6 +84,10 @@
         left: -50%;
         opacity: 0.1;
       }
+
+      .img {
+        height:400px;
+      }
     </style>
   </head>
   <body>
@@ -82,15 +96,17 @@
     <div class="header">About Me</div>
     <div class="menu">
       <div class="info">
-        I'm a graphic designer from Melbourne, Australia with versatile skills
+        I'm a graphic designer from Melbourne, Australia looking to convey messages through sweet art. I also possess versatile skills
         in several other fields including UX/UI design, web design and video
         production! Here's a website featuring some of my best works during my
-        time at RMIT University!
+        time at RMIT University!<br><br>
+        I'll update the image eventually, I promise.
       </div>
+      <div class = "right-side"><img class = "img" src="James Warlond.png"></div>
       </div>
     <div class="menu-item" data-page="index.html">Back</div>
     </div>
 
-    <script src = "script.js"></script>
+    <script src = "script.js" defer></script>
   </body>
 </html>

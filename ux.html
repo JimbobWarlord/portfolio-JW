@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - James Warlond</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Arial Black", sans-serif;
+        background: rgb(0, 0, 60);
+        color: #eaf4ff;
+        overflow: hidden;
+        opacity:0;
+        transition: all 0.5s ease;
+      }
+
+      body.loaded {
+        opacity: 1;
+      }
+      body.fade-out {
+        opacity: 0;
+      }
+
+      .menu {
+        display:flex;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+      }
+
+      .menu-item {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #eaf4ff;
+        top: 85%;
+        left:10%;
+        position: fixed;
+        cursor:pointer;
+        transition: all 0.25s ease;
+      }
+
+      .menu-item:hover {
+        color: crimson;
+        transform: scale(1.1);
+        text-shadow: 0 0 6px crimson;
+      }
+
+      .header {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #eaf4ff;
+        top: 5%;
+        left:10%;
+        position: fixed;
+      }
+
+      .info {
+        font-size: 1.5rem;
+        color: #eaf4ff;
+        margin: 20px 0;
+        width: 800px;
+      }
+
+      .right-side {
+        font-size: 1.5rem;
+        color: #eaf4ff;
+        margin-left:250px;
+      }
+
+      .background-shape {
+        position: absolute;
+        width: 150%;
+        height: 150%;
+        background: rgb(0, 0, 255);
+        transform: rotate(45deg);
+        top: -50%;
+        left: -50%;
+        opacity: 0.1;
+      }
+
+      .link {
+        font-size:1.75rem;
+        color:white;
+        text-decoration: none;
+        transition: all 0.25s ease;
+      }
+
+      .link:hover {
+        color: aqua;
+        transform: scale(1.1);
+        text-shadow: 0 0 6px aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background-shape"></div>
+
+    <div class="header">UX Design Work</div>
+    <div class="menu">
+      <div class="info">
+        For a UX specialisation class, I designed a prototype interface for a mobile cooking app known as ICanCook! (Great name, I know) I created the design using Figma and I was able to implement several features ranging from being able to view productive video tutorials, to bookmarking recipes, to a level-up system as users cooked more!<br><br>
+        <a class = "link" href = "https://www.figma.com/proto/aIX4ZIC6XVsc6UtYLsFl6u/UX-Specialisation---Cooking-App-FINAL-Prototype?node-id=129-290&p=f&t=uM0bIuqRsXIJl0N1-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=129%3A290" target="_blank">Click here to view the full prototype!</a>
+      </div>
+      <div class = "right-side"><img class = "img" src="ux img.png"></div>
+      </div>
+    <div class="menu-item" data-page="index.html">Back</div>
+    </div>
+
+    <script src = "script.js" defer></script>
+  </body>
+</html>
