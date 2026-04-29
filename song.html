@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - James Warlond</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Arial Black", sans-serif;
+        /* background: linear-gradient(135deg, #07111f, #0b2d5a, #103d7a); */
+        background: rgb(0, 0, 60);
+        color: #eaf4ff;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.5s ease;
+      }
+
+      body.loaded {
+        opacity: 1;
+      }
+      body.fade-out {
+        opacity: 0;
+      }
+
+      .menu {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+      }
+
+      .header {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #eaf4ff;
+        top: 5%;
+        left: 10%;
+        position: fixed;
+      }
+
+      .song-item {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #eaf4ff;
+        margin: 25px 0;
+        cursor: pointer;
+        /*transform: skew(-6deg);*/
+        transition: all 0.25s ease;
+      }
+
+      .song-item:hover {
+        color: aqua;
+        transform: scale(1.1);
+        text-shadow: 0 0 6px aqua;
+      }
+
+      .menu-item {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #eaf4ff;
+        top: 85%;
+        left: 10%;
+        position: fixed;
+        cursor: pointer;
+        transition: all 0.25s ease;
+      }
+
+      .menu-item:hover {
+        color: crimson;
+        transform: scale(1.1);
+        text-shadow: 0 0 6px crimson;
+      }
+
+      .background-shape {
+        position: absolute;
+        width: 150%;
+        height: 150%;
+        background: rgb(0, 0, 255);
+        transform: rotate(45deg);
+        top: -50%;
+        left: -50%;
+        opacity: 0.1;
+        /*animation: moveBg 10s linear infinite;*/
+      }
+
+      .p {
+        font-size: 1rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #eaf4ff;
+      }
+
+      @keyframes moveBg {
+        0% {
+          transform: rotate(45deg) translateX(0);
+        }
+        100% {
+          transform: rotate(45deg) translateX(200px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background-shape"></div>
+
+    <div class="header">
+      Music Select<br />
+      <p class="p">
+        These won't keep playing if you exit this page, but hey, the songs are
+        nice to listen to!
+      </p>
+    </div>
+    <div class="menu">
+      <div class="song-item" data-src="Persona 3R.mp3" role="button">
+        I Will Protect You -Reload- (Persona 3 Reload)
+      </div>
+      <div class="song-item">Song 2</div>
+      <div class="song-item">Song 3</div>
+      <div class="song-item">Song 4</div>
+      <div class="song-item">Song 5</div>
+      <div class="song-item">Song 6</div>
+    </div>
+    <div class="menu-item" data-page="index.html">Back</div>
+
+    <audio id="my-audio"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
