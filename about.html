@@ -8,11 +8,10 @@
       body {
         margin: 0;
         font-family: "Arial Black", sans-serif;
-        /* background: linear-gradient(135deg, #07111f, #0b2d5a, #103d7a); */
         background: rgb(0, 0, 60);
         color: #eaf4ff;
         overflow: hidden;
-        opacity: 0;
+        opacity:0;
         transition: all 0.5s ease;
       }
 
@@ -35,9 +34,10 @@
         letter-spacing: 2px;
         text-transform: uppercase;
         color: #eaf4ff;
-        margin: 25px 0;
-        cursor: pointer;
-        /*transform: skew(-6deg);*/
+        top: 85%;
+        left:10%;
+        position: fixed;
+        cursor:pointer;
         transition: all 0.25s ease;
       }
 
@@ -45,6 +45,23 @@
         color: crimson;
         transform: scale(1.1);
         text-shadow: 0 0 6px crimson;
+      }
+
+      .header {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #eaf4ff;
+        top: 5%;
+        left:10%;
+        position: fixed;
+      }
+
+      .info {
+        font-size: 1.5rem;
+        color: #eaf4ff;
+        margin: 20px 0;
+        width: 600px;
       }
 
       .background-shape {
@@ -56,31 +73,24 @@
         top: -50%;
         left: -50%;
         opacity: 0.1;
-        /*animation: moveBg 10s linear infinite;*/
-      }
-
-      @keyframes moveBg {
-        0% {
-          transform: rotate(45deg) translateX(0);
-        }
-        100% {
-          transform: rotate(45deg) translateX(200px);
-        }
       }
     </style>
   </head>
   <body>
     <div class="background-shape"></div>
 
+    <div class="header">About Me</div>
     <div class="menu">
-      <div class="menu-item" data-page="about.html">About Me</div>
-      <div class="menu-item">UX Design Work</div>
-      <div class="menu-item">Web Design Work</div>
-      <div class="menu-item">Graphic Design Work</div>
-      <div class="menu-item">Video Proudction Work</div>
-      <div class="menu-item">Music Select</div>
+      <div class="info">
+        I'm a graphic designer from Melbourne, Australia with versatile skills
+        in several other fields including UX/UI design, web design and video
+        production! Here's a website featuring some of my best works during my
+        time at RMIT University!
+      </div>
+      </div>
+    <div class="menu-item" data-page="index.html">Back</div>
     </div>
 
-    <script src="script.js"></script>
+    <script src = "script.js"></script>
   </body>
 </html>
