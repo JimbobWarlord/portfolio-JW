@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - James Warlond</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Arial Black", sans-serif;
+        background: rgb(0, 0, 60);
+        color: #eaf4ff;
+        opacity: 0;
+        transition: all 0.5s ease;
+        overflow-x: hidden;
+      }
+
+      body.loaded {
+        opacity: 1;
+      }
+      body.fade-out {
+        opacity: 0;
+      }
+
+      .menu {
+        display: flex;
+        position: absolute;
+        left: 4%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .info {
+        font-size: 1.5rem;
+        color: #eaf4ff;
+        margin: 20px 0;
+        width: 800px;
+      }
+
+      .right-side {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      #background-shape {
+        position: absolute;
+        width: 150%;
+        height: 150%;
+        background: rgb(0, 0, 255);
+        transform: rotate(45deg);
+        top: -50%;
+        left: -50%;
+        opacity: 0.1;
+      }
+
+      .img {
+        width: 850px;
+        height: 650px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="background-shape"></div>
+
+    <div class="menu">
+      <img class="img" src="1.jfif" />
+      <img class="img" src="3.jfif" />
+      <img class="img" src="5.jfif" />
+      <img class="img" src="7.jfif" />
+      <img class="img" src="9.jpg" />
+      <img class="img" src="11.jfif" />
+    </div>
+    <div class="right-side">
+      <img class="img" src="2.jfif" />
+      <img class="img" src="4.jfif" />
+      <img class="img" src="6.jfif" />
+      <img class="img" src="8.jfif" />
+      <img class="img" src="10.jfif" />
+      <img class="img" src="12.jfif" />
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
