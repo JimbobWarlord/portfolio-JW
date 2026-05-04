@@ -58,3 +58,11 @@ document.addEventListener("keydown", function (event) {
     backgroundshape.style.backgroundColor = "rgb(255, 0, 255)";
   }
 });
+
+document.addEventListener("keydown", function (event) {
+  if (event.key.toLowerCase() === "g") {
+    document.body.style.backgroundColor = "rgb(0, 62, 18)";
+    console.log("ping");
+    backgroundshape.style.backgroundColor = "rgb(0, 255, 85)";
+  }
+});
