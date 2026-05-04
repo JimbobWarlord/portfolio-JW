@@ -5,13 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - James Warlond</title>
     <style>
+
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         margin: 0;
         font-family: "Arial Black", sans-serif;
         /* background: linear-gradient(135deg, #07111f, #0b2d5a, #103d7a); */
         background: rgb(0, 0, 60);
         color: #eaf4ff;
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: auto;
         opacity: 0;
         transition: all 0.5s ease;
       }
@@ -23,21 +35,29 @@
         opacity: 0;
       }
 
+      .main {
+        min-height:100vh;
+        display:flex;
+        align-items:center;
+        justify-content:flex-start;
+        padding:0 10%;
+        position:relative;
+        z-index:2;
+      }
+
       .header {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         letter-spacing: 2px;
         text-transform: uppercase;
         color: #eaf4ff;
-        top: 8%;
-        left: 10%;
-        position: fixed;
+        margin-top:0.5rem;
+        margin-bottom:4rem;
       }
 
       .menu {
-        position: absolute;
-        top: 52%;
-        left: 10%;
-        transform: translateY(-50%);
+        position: relative;
+        display:flex;
+        flex-direction:column;
       }
 
       .menu-item {
@@ -47,6 +67,7 @@
         color: #eaf4ff;
         margin: 25px 0;
         cursor: pointer;
+        text-decoration: none;
         /*transform: skew(-6deg);*/
         transition: all 0.25s ease;
       }
@@ -58,7 +79,7 @@
       }
 
       #background-shape {
-        position: absolute;
+        position: fixed;
         width: 150%;
         height: 150%;
         background: rgb(0, 0, 255);
@@ -77,18 +98,150 @@
           transform: rotate(45deg) translateX(200px);
         }
       }
+
+      /* Sections */
+      section{
+        padding:100px 10%;
+        position:relative;
+        scroll-margin-top: 1px;
+}
+
+      .header2 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: red;
+        text-shadow: 0 0 6px crimson;
+      }
+
+      .menu2 {
+        display:flex;
+        flex-direction: row;
+        align-items:center;
+      }
+
+      .info {
+        font-size: 1.5rem;
+        color: #eaf4ff;
+        width: 800px;
+      }
+
+      .info2 {
+        font-size: 1.5rem;
+        color: #eaf4ff;
+        width: 800px;
+        margin-top:5rem;
+      }
+
+      .right-side {
+        font-size: 1.5rem;
+        color: #eaf4ff;
+        margin-left:5rem;
+      }
+
+      .right-side2 {
+        font-size: 1.5rem;
+        color: #eaf4ff;
+        margin-left:8rem;
+      }
+
+      .right-side3 {
+        font-size: 1.5rem;
+        color: #eaf4ff;
+        margin-left:1rem;
+      }
+
+      .link {
+        font-size:1.5rem;
+        color:white;
+        text-decoration: none;
+        transition: all 0.25s ease;
+      }
+
+      .link:hover {
+        color: aqua;
+        transform: scale(1.1);
+        text-shadow: 0 0 6px aqua;
+      }
+
+      .img1 {
+        height:25rem;
+      }
+
+      .img2 {
+        height:30rem;
+      }
+
+      .img3 {
+        height:20rem;
+      }
+
     </style>
   </head>
   <body>
     <div id="background-shape"></div>
-    <div class="header">Welcome to my Portfolio!</div>
+
+    <section class = "main">
     <div class="menu">
-      <div class="menu-item" data-page="about.html">About Me</div>
-      <div class="menu-item" data-page="ux.html">UX Design Work</div>
-      <div class="menu-item" data-page="web.html">Web Design Work</div>
-      <div class="menu-item" data-page="graphic.html">Graphic Design Work</div>
-      <div class="menu-item">Video Proudction Work (In Development)</div>
+      <div class="header">Welcome to my Portfolio!</div>
+      <a href = "#about" class = "menu-item">About Me</a>
+      <a href = "#ux" class = "menu-item">UX Design Work</a>
+      <a href = "#web" class = "menu-item">Web Design Work</a>
+      <a href = "#graphic" class = "menu-item">Graphic Design Work</a>
     </div>
+    </section>
+
+    <section id="about">
+      <h2 class="header2">About Me</h2>
+      <div class="menu2">
+      <p class="info">
+        I'm a graphic designer from Melbourne, Australia looking to convey messages through sweet art. I also possess versatile skills
+        in several other fields including UX/UI design, web design and video
+        production! Here's a website featuring some of my best works during my
+        time at RMIT University!<br><br>
+        I'll update the image eventually, I promise.
+      </p>
+      <div class = "right-side"><img class = "img1" src="James Warlond.png"></div>
+      </div>
+    </div>
+    </section>
+
+    <section id="ux">
+      <h2 class="header2">UX Design Work</h2>
+      <div class="menu2">
+      <p class="info">
+        For a UX specialisation class, I designed a prototype interface for a mobile cooking app known as ICanCook! (Great name, I know) I created the design using Figma and I was able to implement several features ranging from being able to view productive video tutorials, to bookmarking recipes, to a level-up system as users cooked more!<br><br>
+        <a class = "link" href = "https://www.figma.com/proto/aIX4ZIC6XVsc6UtYLsFl6u/UX-Specialisation---Cooking-App-FINAL-Prototype?node-id=129-290&p=f&t=uM0bIuqRsXIJl0N1-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=129%3A290" target="_blank">Click here to view the full prototype!</a>
+      </p>
+      <div class = "right-side2"><img class = "img2" src="ux img.png"></div>
+      </div>
+    </div>
+    </section>
+
+    <section id="web">
+      <h2 class="header2">Web Design Work</h2>
+      <div class="menu2">
+      <p class="info2">
+        For a web design class, my final project was a 'music map' based on Team Cherry's Hollow Knight, where users could hover their cursor on various parts of the map, playing different songs from the game. I ended up making two versions, a copyright-free one and a certainly copyrighted one.<br><br>
+        <a class = "link" href = "https://jw-hollowknightmusicmapnocopyright.netlify.app" target="_blank">Click here to view the non-copyright project!</a><br><br>
+        <a class = "link" href = "https://jw-hollowknightmusicmap.netlify.app" target="_blank">Click here to view the copyright (unsubmitted) project!</a>
+      </p>
+      <div class = "right-side3"><img class = "img3" src="web img.png"></div>
+      </div>
+    </div>
+    </section>
+
+    <section id="graphic">
+      <h2 class="header2">Graphic Design Work</h2>
+      <div class="menu2">
+      <p class="info2">
+        My Graphic Design class project involves the creation of three logos that communicate a message about my identity. I've done a lot of work for this project, and eventually I'll even have to create a logo using Adobe Illustrator as well as preparing it for clients and printers. Feel free to keep up with my progress!<br><br>
+        <a class = "link" href = "drawings.html" target="_blank">Click here to view my progress! (More on the way)</a>
+      </p>
+      <div class = "right-side"><img class = "img1" src="2.jfif"></div>
+      </div>
+    </div>
+    </section>
 
     <script src="script.js" defer></script>
   </body>
